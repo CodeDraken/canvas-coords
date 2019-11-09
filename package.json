@@ -1,0 +1,51 @@
+{
+  "name": "canvas-coords",
+  "version": "0.0.1",
+  "description": "Draw canvas coordinates and grid system",
+  "main": "dist",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeDraken/canvas-coords.git"
+  },
+  "staticFiles": {
+    "staticPath": "assets",
+    "watcherGlob": "**"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "prebuild": "rimraf ./dist",
+    "build": "parcel build --experimental-scope-hoisting src/js/index.js",
+    "lint": "standard 'src/**/*.js'",
+    "lint-fix": "standard 'src/**/*.js' --fix"
+  },
+  "author": "CodeDraken",
+  "license": "MIT",
+  "standard": {
+    "globals": [
+      "$",
+      "jQuery",
+      "fetch"
+    ],
+    "ignore": [
+      "node_modules/**"
+    ],
+    "parser": "babel-eslint",
+    "envs": [
+      "jest",
+      "mocha",
+      "node"
+    ]
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.2.1",
+    "rimraf": "^3.0.0",
+    "standard": "^14.3.1"
+  },
+  "dependencies": {}
+}
