@@ -1,7 +1,5 @@
-//import { Grid, Mouse } from '../../dist'
-
-import Mouse from './Mouse'
-import Grid from './Grid'
+// TODO: use npm package when published
+import { Grid, Mouse } from './canvas-coords'
 
 ;(function () {
   let ctx, canvas, mouse, grid
