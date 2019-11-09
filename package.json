@@ -18,7 +18,7 @@
     "start": "parcel demo/index.html",
     "prebuild": "rimraf ./dist",
     "build": "parcel build --experimental-scope-hoisting src/index.js",
-    "gh-pages": "gh-pages -d demo",
+    "deploy": "gh-pages -d demo --repo git@github.com:CodeDraken/canvas-coords.git --branch gh-pages",
     "lint": "standard 'src/**/*.js'",
     "lint-fix": "standard 'src/**/*.js' --fix"
   },
