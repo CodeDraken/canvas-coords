@@ -8,10 +8,12 @@ export class Mouse {
     this.ctx = ctx
     this.canvas = canvas
     this.color = color
+    this.font = font
 
     this.setPos = this.setPos.bind(this)
   }
 
+  // TODO: add a callback hook
   track (enabled = true) {
     const { canvas } = this
 
@@ -37,12 +39,12 @@ export class Mouse {
   }
 
   draw () {
-    const { x, y, canvas, ctx } = this
+    const { x, y, canvas, ctx, font, color } = this
     const txt = `X: ${x}, Y: ${y}`
 
     ctx.save()
-    ctx.fillStyle = this.color
-    ctx.font = '16px Monospace'
+    ctx.fillStyle = color
+    ctx.font = font
 
     // offset the text position for readability (so it doesnt go off screen)
     const offsetX = x < canvas.width / 2 ? 20 : -ctx.measureText(txt).width - 20

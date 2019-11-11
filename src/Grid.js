@@ -27,7 +27,8 @@ class Line {
 export class Grid {
   constructor (
     color = 'gray', lineWidth = 0.3, step = 10,
-    boldNth = 5, boldColor = 'DarkGray', boldWidth = 0.5
+    boldNth = 5, boldColor = 'DarkGray', boldWidth = 0.5,
+    font = '16px Monospace'
   ) {
     this.color = color
     this.lineWidth = lineWidth
@@ -35,6 +36,7 @@ export class Grid {
     this.boldNth = boldNth
     this.boldColor = boldColor
     this.boldWidth = boldWidth
+    this.font = font
 
     this.lines = null
   }
@@ -74,10 +76,10 @@ export class Grid {
   }
 
   drawText (ctx, canvas) {
-    const { step, boldNth, boldColor } = this
+    const { step, boldNth, boldColor, font } = this
 
     ctx.save()
-    ctx.font = '16px Monospace'
+    ctx.font = font
     ctx.fillStyle = boldColor
 
     // add 0,0

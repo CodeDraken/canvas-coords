@@ -1,4 +1,3 @@
-// TODO: use npm package when published
 import { Grid, Mouse } from './canvas-coords'
 
 ;(function () {
@@ -7,7 +6,7 @@ import { Grid, Mouse } from './canvas-coords'
   function init () {
     canvas = document.getElementById('canvas')
     ctx = canvas.getContext('2d')
-    mouse = new Mouse(ctx, canvas)
+    mouse = new Mouse(ctx, canvas, 'gray', 'Bold 16px Monospace')
     grid = new Grid()
 
     mouse.track()
