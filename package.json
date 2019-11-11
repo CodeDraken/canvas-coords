@@ -1,6 +1,6 @@
 {
   "name": "canvas-coords",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Draw canvas coordinates and grid system",
   "main": "dist",
   "files": [
