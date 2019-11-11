@@ -18,6 +18,7 @@
     "start": "parcel demo/index.html",
     "prebuild": "rimraf ./dist",
     "build": "parcel build --experimental-scope-hoisting src/index.js",
+    "prepublish": "npm run build",
     "predeploy": "rimraf ./demo_build && parcel build --experimental-scope-hoisting demo/index.html --out-dir demo_build --public-url /canvas-coords/",
     "deploy": "npm run predeploy && gh-pages -d demo_build --repo git@github.com:CodeDraken/canvas-coords.git --branch gh-pages",
     "lint": "standard 'src/**/*.js'",
